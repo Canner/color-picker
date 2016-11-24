@@ -84,11 +84,9 @@ export default class Panel extends React.Component {
   }
 
   onAlphaChange(alpha) {
-    if (this.props.alpha === undefined) {
-      this.setState({
-        alpha,
-      });
-    }
+    this.setState({
+      alpha,
+    });
   }
 
   onFocus() {
