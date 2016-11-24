@@ -28659,6 +28659,7 @@
 	  }, {
 	    key: 'onMouseDown',
 	    value: function onMouseDown(e) {
+	      e.preventDefault();
 	      var x = e.clientX;
 	      var y = e.clientY;
 	
