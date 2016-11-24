@@ -89,11 +89,6 @@ export default class Panel extends React.Component {
         alpha,
       });
     }
-    this.props.onChange({
-      color: this.getHexColor(),
-      hsv: this.state.hsv,
-      alpha,
-    });
   }
 
   onFocus() {
