@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import '@canner/rc-color-picker/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
