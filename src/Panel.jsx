@@ -30,6 +30,7 @@ export default class Panel extends React.Component {
       'onFocus',
       'onBlur',
       'onSystemColorPickerOpen',
+      'onSave',
     ];
     // bind methods
     events.forEach(m => {
@@ -60,13 +61,19 @@ export default class Panel extends React.Component {
       state.paramsHsv = hsv;
     }
     this.setState(state);
+  }
 
+  onSave(e) {
+    e.preventDefault();
+    const { hsv } = this.state;
+    const { onChange, close } = this.props;
     const ret = {
       color: this.getHexColor(hsv),
       hsv,
       alpha: this.state.alpha,
     };
-    this.props.onChange(ret);
+    onChange(ret);
+    close();
   }
 
   onSystemColorPickerOpen(e) {
@@ -119,12 +126,19 @@ export default class Panel extends React.Component {
 
   render() {
     const prefixCls = this.props.prefixCls;
+    const saveText = this.props.saveText;
     const hsv = this.state.hsv;
     const alpha = this.state.alpha;
+    const stopDefault = e => {
+      e.preventDefault();
+    };
     return (
       <div
         className={prefixCls}
         style={this.props.style}
+        onClick={stopDefault}
+        onMouseDown={stopDefault}
+        onMouseUp={stopDefault}
         onFocus={this.onFocus}
         onBlur={this.onBlur}
         tabIndex="0"
@@ -171,6 +185,11 @@ export default class Panel extends React.Component {
               mode={this.props.mode}
               />
           </div>
+          <div className={prefixCls + '-' + ('wrap')}>
+            <button
+              className={`${prefixCls}-save-btn`}
+              onClick={this.onSave}>{saveText}</button>
+          </div>
         </div>
       </div>
     );
@@ -190,6 +209,8 @@ Panel.propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
+  close: PropTypes.func,
+  saveText: PropTypes.string,
   mode: PropTypes.oneOf(['RGB', 'HSL', 'HSB']),
 };
 

@@ -1,7 +1,7 @@
-import 'rc-color-picker/assets/index.less';
+import '@canner/rc-color-picker/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ColorPicker from 'rc-color-picker';
+import ColorPicker from '@canner/rc-color-picker';
 
 function changeHandler(colors) {
   console.log(colors);
@@ -16,7 +16,7 @@ ReactDOM.render(
       onChange={changeHandler}
       placement="topLeft"
     >
-      <span className="rc-color-picker-trigger"/>
+      <span className="@canner/rc-color-picker-trigger"/>
     </ColorPicker>
     <h4>topRight</h4>
     <ColorPicker

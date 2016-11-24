@@ -120,6 +120,8 @@ export default class ColorPicker extends React.Component {
         prefixCls={this.props.prefixCls + '-panel'}
         onChange={this.onChange}
         onBlur={this.onBlur}
+        close={this.close}
+        saveText={this.props.saveText}
         mode={this.props.mode}
       />
     );
@@ -210,6 +212,7 @@ ColorPicker.propTypes = {
   mode: PropTypes.oneOf(['RGB', 'HSL', 'HSB']),
   placement: PropTypes.oneOf(['topLeft', 'topRight', 'bottomLeft', 'bottomRight']),
   style: PropTypes.object,
+  saveText: PropTypes.string,
 };
 
 ColorPicker.defaultProps = {
@@ -225,4 +228,5 @@ ColorPicker.defaultProps = {
   children: <span className="rc-color-picker-trigger"/>,
   placement: 'topLeft',
   style: {},
+  saveText: 'Save',
 };
