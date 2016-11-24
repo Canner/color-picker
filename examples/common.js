@@ -26460,11 +26460,9 @@
 	  }, {
 	    key: 'onAlphaChange',
 	    value: function onAlphaChange(alpha) {
-	      if (this.props.alpha === undefined) {
-	        this.setState({
-	          alpha: alpha
-	        });
-	      }
+	      this.setState({
+	        alpha: alpha
+	      });
 	    }
 	  }, {
 	    key: 'onFocus',
