@@ -26465,11 +26465,6 @@
 	          alpha: alpha
 	        });
 	      }
-	      this.props.onChange({
-	        color: this.getHexColor(),
-	        hsv: this.state.hsv,
-	        alpha: alpha
-	      });
 	    }
 	  }, {
 	    key: 'onFocus',
