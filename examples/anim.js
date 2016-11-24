@@ -19,13 +19,13 @@ webpackJsonp([0],[
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(35);
+	var _reactDom = __webpack_require__(34);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _rcColorPicker = __webpack_require__(174);
+	var _cannerRcColorPicker = __webpack_require__(180);
 	
-	var _rcColorPicker2 = _interopRequireDefault(_rcColorPicker);
+	var _cannerRcColorPicker2 = _interopRequireDefault(_cannerRcColorPicker);
 	
 	function changeHandler(colors) {
 	  console.log(colors);
@@ -34,7 +34,7 @@ webpackJsonp([0],[
 	_reactDom2['default'].render(_react2['default'].createElement(
 	  'div',
 	  { style: { margin: '20px 20px 20px', textAlign: 'center' } },
-	  _react2['default'].createElement(_rcColorPicker2['default'], {
+	  _react2['default'].createElement(_cannerRcColorPicker2['default'], {
 	    animation: 'slide-up',
 	    color: '#36c',
 	    onChange: changeHandler

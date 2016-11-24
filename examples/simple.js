@@ -3,12 +3,12 @@ webpackJsonp([3],{
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(234);
+	module.exports = __webpack_require__(281);
 
 
 /***/ },
 
-/***/ 234:
+/***/ 281:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,13 +21,13 @@ webpackJsonp([3],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(35);
+	var _reactDom = __webpack_require__(34);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _rcColorPicker = __webpack_require__(174);
+	var _cannerRcColorPicker = __webpack_require__(180);
 	
-	var _rcColorPicker2 = _interopRequireDefault(_rcColorPicker);
+	var _cannerRcColorPicker2 = _interopRequireDefault(_cannerRcColorPicker);
 	
 	function changeHandler(colors) {
 	  console.log(colors);
@@ -42,21 +42,21 @@ webpackJsonp([3],{
 	    'topLeft'
 	  ),
 	  _react2['default'].createElement(
-	    _rcColorPicker2['default'],
+	    _cannerRcColorPicker2['default'],
 	    {
 	      color: '#36c',
 	      alpha: 30,
 	      onChange: changeHandler,
 	      placement: 'topLeft'
 	    },
-	    _react2['default'].createElement('span', { className: 'rc-color-picker-trigger' })
+	    _react2['default'].createElement('span', { className: '@canner/rc-color-picker-trigger' })
 	  ),
 	  _react2['default'].createElement(
 	    'h4',
 	    null,
 	    'topRight'
 	  ),
-	  _react2['default'].createElement(_rcColorPicker2['default'], {
+	  _react2['default'].createElement(_cannerRcColorPicker2['default'], {
 	    color: '#F10',
 	    onChange: changeHandler,
 	    placement: 'topRight'
@@ -131,7 +131,7 @@ webpackJsonp([3],{
 	    null,
 	    'bottomLeft'
 	  ),
-	  _react2['default'].createElement(_rcColorPicker2['default'], {
+	  _react2['default'].createElement(_cannerRcColorPicker2['default'], {
 	    color: '#0ad',
 	    alpha: 50,
 	    onChange: changeHandler,
@@ -142,7 +142,7 @@ webpackJsonp([3],{
 	    null,
 	    'bottomRight'
 	  ),
-	  _react2['default'].createElement(_rcColorPicker2['default'], {
+	  _react2['default'].createElement(_cannerRcColorPicker2['default'], {
 	    color: '#0F0',
 	    onChange: changeHandler,
 	    placement: 'bottomRight'

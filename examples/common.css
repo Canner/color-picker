@@ -29,6 +29,9 @@
   bottom: 0;
   height: 12.5px;
 }
+.rc-color-picker-panel-save-btn {
+  box-sizing: border-box;
+}
 .rc-color-picker-trigger {
   border: 1px solid #999;
   display: inline-block;
