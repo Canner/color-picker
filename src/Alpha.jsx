@@ -29,6 +29,7 @@ export default class Alpha extends React.Component {
   }
 
   onMouseDown(e) {
+    e.preventDefault();
     const x = e.clientX;
     const y = e.clientY;
 
