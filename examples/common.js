@@ -21587,7 +21587,7 @@
 	      open: false
 	    };
 	
-	    var events = ['onTriggerClick', 'onChange', 'onBlur', 'getPickerElement', 'getRootDOMNode', 'getTriggerDOMNode', 'onVisibleChange', 'setOpen', 'open', 'close', 'focus'];
+	    var events = ['onTriggerClick', 'onChange', 'onBlur', 'getPickerElement', 'getRootDOMNode', 'getTriggerDOMNode', 'onVisibleChange', 'setOpen', 'open', 'close'];
 	
 	    events.forEach(function (e) {
 	      _this[e] = _this[e].bind(_this);
@@ -21613,7 +21613,8 @@
 	    }
 	  }, {
 	    key: 'onTriggerClick',
-	    value: function onTriggerClick() {
+	    value: function onTriggerClick(e) {
+	      e.preventDefault();
 	      this.setState({
 	        open: !this.state.open
 	      });
@@ -21637,13 +21638,7 @@
 	  }, {
 	    key: 'onVisibleChange',
 	    value: function onVisibleChange(open) {
-	      var _this2 = this;
-	
-	      this.setOpen(open, function () {
-	        if (open) {
-	          _reactDom2['default'].findDOMNode(_this2.pickerPanelInstance).focus();
-	        }
-	      });
+	      this.setOpen(open);
 	    }
 	  }, {
 	    key: 'setOpen',
@@ -21701,13 +21696,6 @@
 	    key: 'close',
 	    value: function close(callback) {
 	      this.setOpen(false, callback);
-	    }
-	  }, {
-	    key: 'focus',
-	    value: function focus() {
-	      if (!this.state.open) {
-	        _reactDom2['default'].findDOMNode(this).focus();
-	      }
 	    }
 	  }, {
 	    key: 'render',
