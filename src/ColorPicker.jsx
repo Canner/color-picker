@@ -33,7 +33,6 @@ export default class ColorPicker extends React.Component {
       'setOpen',
       'open',
       'close',
-      'focus',
     ];
 
     events.forEach(e => {
@@ -57,7 +56,8 @@ export default class ColorPicker extends React.Component {
     }
   }
 
-  onTriggerClick() {
+  onTriggerClick(e) {
+    e.preventDefault();
     this.setState({
       open: !this.state.open,
     });
@@ -78,11 +78,7 @@ export default class ColorPicker extends React.Component {
   }
 
   onVisibleChange(open) {
-    this.setOpen(open, () => {
-      if (open) {
-        ReactDOM.findDOMNode(this.pickerPanelInstance).focus();
-      }
-    });
+    this.setOpen(open);
   }
 
   setOpen(open, callback) {
@@ -133,12 +129,6 @@ export default class ColorPicker extends React.Component {
 
   close(callback) {
     this.setOpen(false, callback);
-  }
-
-  focus() {
-    if (!this.state.open) {
-      ReactDOM.findDOMNode(this).focus();
-    }
   }
 
   render() {
